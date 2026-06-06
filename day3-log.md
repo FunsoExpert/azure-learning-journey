@@ -167,7 +167,4 @@ VM Scale Sets with auto-scaling
 
 Health probes and load balancing rules
 
-text
-
----
 
