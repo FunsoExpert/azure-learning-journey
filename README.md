@@ -80,6 +80,11 @@ This repository documents my 90-day journey from Azure novice to hireable cloud 
 - [`destroy-all.ps1`](./destroy-all.ps1) - Resource cleanup script
 
 ---
+| Day | Topic | AZ-104 Domains | Status |
+|-----|-------|----------------|--------|
+| [Day 1](./day1-log.md) | Storage Accounts, Bicep, PowerShell | Domains 2, 3, 5 | ✅ Complete |
+| [Day 2](./day2-log.md) | VMs, Availability, NSG, App Service | Domains 3, 4 | ✅ Complete |
+| Day 3 | Azure Policy, RBAC, Governance | Domain 1 | 🔄 Tomorrow |
 
 ## Connect With Me
 
@@ -89,8 +94,4 @@ This repository documents my 90-day journey from Azure novice to hireable cloud 
 ---
 
 *"Consistency beats talent when talent doesn't show up."*
-| Day | Topic | AZ-104 Domains | Status |
-|-----|-------|----------------|--------|
-| [Day 1](./day1-log.md) | Storage Accounts, Bicep, PowerShell | Domains 2, 3, 5 | ✅ Complete |
-| [Day 2](./day2-log.md) | VMs, Availability, NSG, App Service | Domains 3, 4 | ✅ Complete |
-| Day 3 | Azure Policy, RBAC, Governance | Domain 1 | 🔄 Tomorrow |
+
