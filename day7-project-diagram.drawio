@@ -31,6 +31,9 @@
         <mxCell id="y1QJE9gFH8-emdlXOOnW-13" parent="1" style="image;aspect=fixed;html=1;points=[];align=center;fontSize=12;image=img/lib/azure2/storage/Storage_Accounts.svg;" value="" vertex="1">
           <mxGeometry height="52" width="65" x="692" y="370" as="geometry" />
         </mxCell>
+        <mxCell id="y1QJE9gFH8-emdlXOOnW-14" parent="1" style="image;aspect=fixed;html=1;points=[];align=center;fontSize=12;image=img/lib/azure2/security/Key_Vaults.svg;" value="" vertex="1">
+          <mxGeometry height="68" width="68" x="760" y="540" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
