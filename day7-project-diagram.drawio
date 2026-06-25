@@ -1,20 +1,20 @@
 <mxfile host="app.diagrams.net">
   <diagram name="Page-1" id="mknqwfuA6DpO9jJDFk4o">
-    <mxGraphModel dx="1880" dy="570" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="1856" dy="570" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
         <mxCell id="y1QJE9gFH8-emdlXOOnW-5" parent="1" style="rounded=0;whiteSpace=wrap;html=1;opacity=30;" value="" vertex="1">
-          <mxGeometry height="580" width="930" x="-90" y="40" as="geometry" />
+          <mxGeometry height="520" width="890" x="-50" y="40" as="geometry" />
         </mxCell>
         <mxCell id="y1QJE9gFH8-emdlXOOnW-6" parent="1" style="image;aspect=fixed;html=1;points=[];align=center;fontSize=12;image=img/lib/azure2/networking/Virtual_Networks.svg;" value="" vertex="1">
-          <mxGeometry height="40" width="67" x="-80" y="20" as="geometry" />
+          <mxGeometry height="40" width="67" x="-40" y="20" as="geometry" />
         </mxCell>
         <mxCell id="y1QJE9gFH8-emdlXOOnW-7" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="App Gateway Subnet" vertex="1">
-          <mxGeometry height="120" width="230" x="-40" y="190" as="geometry" />
+          <mxGeometry height="120" width="230" x="40" y="187.5" as="geometry" />
         </mxCell>
         <mxCell id="y1QJE9gFH8-emdlXOOnW-8" parent="1" style="image;aspect=fixed;html=1;points=[];align=center;fontSize=12;image=img/lib/azure2/networking/Application_Gateways.svg;" value="" vertex="1">
-          <mxGeometry height="64" width="64" x="-30" y="200" as="geometry" />
+          <mxGeometry height="64" width="64" x="40" y="187.5" as="geometry" />
         </mxCell>
         <mxCell id="y1QJE9gFH8-emdlXOOnW-9" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Web/API Subnet" vertex="1">
           <mxGeometry height="125" width="290" x="320" y="185" as="geometry" />
@@ -29,10 +29,22 @@
           <mxGeometry height="64" width="48" x="700" y="200" as="geometry" />
         </mxCell>
         <mxCell id="y1QJE9gFH8-emdlXOOnW-13" parent="1" style="image;aspect=fixed;html=1;points=[];align=center;fontSize=12;image=img/lib/azure2/storage/Storage_Accounts.svg;" value="" vertex="1">
-          <mxGeometry height="52" width="65" x="692" y="370" as="geometry" />
+          <mxGeometry height="52" width="65" x="691.5" y="320" as="geometry" />
         </mxCell>
         <mxCell id="y1QJE9gFH8-emdlXOOnW-14" parent="1" style="image;aspect=fixed;html=1;points=[];align=center;fontSize=12;image=img/lib/azure2/security/Key_Vaults.svg;" value="" vertex="1">
-          <mxGeometry height="68" width="68" x="760" y="540" as="geometry" />
+          <mxGeometry height="68" width="68" x="772" y="492" as="geometry" />
+        </mxCell>
+        <mxCell id="y1QJE9gFH8-emdlXOOnW-15" edge="1" parent="1" style="endArrow=classic;html=1;rounded=0;endFill=1;" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint y="219" />
+            </Array>
+            <mxPoint x="-70" y="219" as="sourcePoint" />
+            <mxPoint x="30" y="219" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="y1QJE9gFH8-emdlXOOnW-17" connectable="0" parent="y1QJE9gFH8-emdlXOOnW-15" style="edgeLabel;resizable=0;html=1;;align=left;verticalAlign=bottom;" value="User/HTTPS" vertex="1">
+          <mxGeometry relative="1" x="-1" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
