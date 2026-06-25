@@ -1,11 +1,35 @@
 <mxfile host="app.diagrams.net">
   <diagram name="Page-1" id="mknqwfuA6DpO9jJDFk4o">
-    <mxGraphModel dx="1030" dy="570" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="1880" dy="570" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="_JHMJ2ViuqkfbEZLdYto-1" parent="1" style="image;aspect=fixed;html=1;points=[];align=center;fontSize=12;image=img/lib/azure2/networking/Virtual_Networks.svg;" value="" vertex="1">
-          <mxGeometry height="541.94" width="907.75" x="10" y="10" as="geometry" />
+        <mxCell id="y1QJE9gFH8-emdlXOOnW-5" parent="1" style="rounded=0;whiteSpace=wrap;html=1;opacity=30;" value="" vertex="1">
+          <mxGeometry height="580" width="930" x="-90" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="y1QJE9gFH8-emdlXOOnW-6" parent="1" style="image;aspect=fixed;html=1;points=[];align=center;fontSize=12;image=img/lib/azure2/networking/Virtual_Networks.svg;" value="" vertex="1">
+          <mxGeometry height="40" width="67" x="-80" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="y1QJE9gFH8-emdlXOOnW-7" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="App Gateway Subnet" vertex="1">
+          <mxGeometry height="120" width="230" x="-40" y="190" as="geometry" />
+        </mxCell>
+        <mxCell id="y1QJE9gFH8-emdlXOOnW-8" parent="1" style="image;aspect=fixed;html=1;points=[];align=center;fontSize=12;image=img/lib/azure2/networking/Application_Gateways.svg;" value="" vertex="1">
+          <mxGeometry height="64" width="64" x="-30" y="200" as="geometry" />
+        </mxCell>
+        <mxCell id="y1QJE9gFH8-emdlXOOnW-9" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Web/API Subnet" vertex="1">
+          <mxGeometry height="125" width="290" x="320" y="185" as="geometry" />
+        </mxCell>
+        <mxCell id="y1QJE9gFH8-emdlXOOnW-10" parent="1" style="image;aspect=fixed;html=1;points=[];align=center;fontSize=12;image=img/lib/azure2/app_services/App_Services.svg;" value="" vertex="1">
+          <mxGeometry height="64" width="64" x="343" y="205.5" as="geometry" />
+        </mxCell>
+        <mxCell id="y1QJE9gFH8-emdlXOOnW-11" parent="1" style="image;aspect=fixed;html=1;points=[];align=center;fontSize=12;image=img/lib/azure2/app_services/App_Services.svg;" value="" vertex="1">
+          <mxGeometry height="64" width="64" x="530" y="205.5" as="geometry" />
+        </mxCell>
+        <mxCell id="y1QJE9gFH8-emdlXOOnW-12" parent="1" style="image;aspect=fixed;html=1;points=[];align=center;fontSize=12;image=img/lib/azure2/databases/SQL_Database.svg;" value="" vertex="1">
+          <mxGeometry height="64" width="48" x="700" y="200" as="geometry" />
+        </mxCell>
+        <mxCell id="y1QJE9gFH8-emdlXOOnW-13" parent="1" style="image;aspect=fixed;html=1;points=[];align=center;fontSize=12;image=img/lib/azure2/storage/Storage_Accounts.svg;" value="" vertex="1">
+          <mxGeometry height="52" width="65" x="692" y="370" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
