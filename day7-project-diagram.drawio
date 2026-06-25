@@ -20,7 +20,7 @@
           <mxGeometry height="64" width="64" x="40" y="187.5" as="geometry" />
         </mxCell>
         <mxCell id="y1QJE9gFH8-emdlXOOnW-9" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="" vertex="1">
-          <mxGeometry height="125" width="290" x="320" y="185" as="geometry" />
+          <mxGeometry height="125" width="120" x="320" y="182.5" as="geometry" />
         </mxCell>
         <mxCell id="y1QJE9gFH8-emdlXOOnW-10" parent="1" style="image;aspect=fixed;html=1;points=[];align=center;fontSize=12;image=img/lib/azure2/app_services/App_Services.svg;" value="Frontend UI" vertex="1">
           <mxGeometry height="64" width="64" x="320" y="205.5" as="geometry" />
@@ -64,6 +64,9 @@
         </mxCell>
         <mxCell id="y1QJE9gFH8-emdlXOOnW-24" edge="1" parent="1" source="y1QJE9gFH8-emdlXOOnW-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.012;entryY=0.597;entryDx=0;entryDy=0;entryPerimeter=0;endArrow=none;dashed=1;" target="y1QJE9gFH8-emdlXOOnW-14">
           <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="y1QJE9gFH8-emdlXOOnW-26" parent="1" style="rounded=0;whiteSpace=wrap;html=1;opacity=10;strokeWidth=6;" value="" vertex="1">
+          <mxGeometry height="125" width="120" x="502" y="185" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
