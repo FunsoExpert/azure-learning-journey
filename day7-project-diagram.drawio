@@ -22,7 +22,7 @@
         <mxCell id="y1QJE9gFH8-emdlXOOnW-9" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Web/API Subnet" vertex="1">
           <mxGeometry height="125" width="290" x="320" y="185" as="geometry" />
         </mxCell>
-        <mxCell id="y1QJE9gFH8-emdlXOOnW-10" parent="1" style="image;aspect=fixed;html=1;points=[];align=center;fontSize=12;image=img/lib/azure2/app_services/App_Services.svg;" value="" vertex="1">
+        <mxCell id="y1QJE9gFH8-emdlXOOnW-10" parent="1" style="image;aspect=fixed;html=1;points=[];align=center;fontSize=12;image=img/lib/azure2/app_services/App_Services.svg;" value="Frontend UI" vertex="1">
           <mxGeometry height="64" width="64" x="320" y="205.5" as="geometry" />
         </mxCell>
         <mxCell id="y1QJE9gFH8-emdlXOOnW-20" edge="1" parent="1" source="y1QJE9gFH8-emdlXOOnW-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="y1QJE9gFH8-emdlXOOnW-12" value="">
@@ -35,7 +35,7 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="y1QJE9gFH8-emdlXOOnW-11" parent="1" style="image;aspect=fixed;html=1;points=[];align=center;fontSize=12;image=img/lib/azure2/app_services/App_Services.svg;" value="" vertex="1">
+        <mxCell id="y1QJE9gFH8-emdlXOOnW-11" parent="1" style="image;aspect=fixed;html=1;points=[];align=center;fontSize=12;image=img/lib/azure2/app_services/App_Services.svg;" value="Backend API" vertex="1">
           <mxGeometry height="64" width="64" x="530" y="205.5" as="geometry" />
         </mxCell>
         <mxCell id="y1QJE9gFH8-emdlXOOnW-12" parent="1" style="image;aspect=fixed;html=1;points=[];align=center;fontSize=12;image=img/lib/azure2/databases/SQL_Database.svg;" value="" vertex="1">
