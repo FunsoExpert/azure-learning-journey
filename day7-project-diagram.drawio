@@ -19,7 +19,7 @@
         <mxCell id="y1QJE9gFH8-emdlXOOnW-8" parent="1" style="image;aspect=fixed;html=1;points=[];align=center;fontSize=12;image=img/lib/azure2/networking/Application_Gateways.svg;" value="" vertex="1">
           <mxGeometry height="64" width="64" x="40" y="187.5" as="geometry" />
         </mxCell>
-        <mxCell id="y1QJE9gFH8-emdlXOOnW-9" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Web/API Subnet" vertex="1">
+        <mxCell id="y1QJE9gFH8-emdlXOOnW-9" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="" vertex="1">
           <mxGeometry height="125" width="290" x="320" y="185" as="geometry" />
         </mxCell>
         <mxCell id="y1QJE9gFH8-emdlXOOnW-10" parent="1" style="image;aspect=fixed;html=1;points=[];align=center;fontSize=12;image=img/lib/azure2/app_services/App_Services.svg;" value="Frontend UI" vertex="1">
