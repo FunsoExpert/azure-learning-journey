@@ -1,97 +1,91 @@
 # Azure Learning Journey
 
-**Start Date:** June 4, 2026  
-**Target:** AZ-104 Certification + Cloud Engineer Role  
-**Daily Commitment:** 6-8 hours  
-**Background:** 8+ years application support 
+**Start Date:** June 4, 2026
+**Target:** AZ-104 Certification + Cloud/Azure Engineer Role
+**Background:** 10+ years application support (banking, utilities) — see [full roadmap](./ROADMAP.md)
 
 ---
 
 ## About This Repository
 
-This repository documents my 90-day journey from Azure novice to hireable cloud engineer. Every day includes:
-- Hands-on labs with real Azure resources
-- AZ-104 exam domain mapping
+This repository documents my hands-on path from application support background to AZ-104 certified, job-ready Azure engineer. Every lab is real Azure CLI/Bicep work against a live subscription — not just reading notes.
+
+- Hands-on labs with real Azure resources, mapped to AZ-104 exam domains
 - Infrastructure as Code (Bicep)
-- PowerShell automation
-- Cost management and security best practices
+- PowerShell/CLI automation
+- Governance, cost management, and security practices
+- Simulated incident response, written up ITSM-style
+- Interview preparation, built alongside the technical work
+
+See [`ROADMAP.md`](./ROADMAP.md) for the full plan this repo follows.
 
 ---
 
-## Daily Logs
+## Repository Structure
 
-| Day | Topic | AZ-104 Domains | Status |
-|-----|-------|----------------|--------|
-| [Day 1](./day1-log.md) | Storage Accounts, Bicep, PowerShell | Domains 2, 3, 5 | ✅ Complete |
-| Day 2 | Virtual Machines, NSGs, Availability | Domains 3, 4 | 🔄 Tomorrow |
-| Day 3 | Azure Policy, RBAC, Governance | Domain 1 | ⏳ |
-| Day 4 | Load Balancers, Scale Sets | Domains 3, 4 | ⏳ |
-| Day 5 | Monitoring, Alerts, Backup | Domain 5 | ⏳ |
-
----
-
-## Skills Demonstrated
-
-### Completed (Day 1)
-- ✅ Azure CLI authentication with MFA
-- ✅ Storage accounts (LRS, ZRS, GRS, Azure Files)
-- ✅ SAS tokens (time-limited, permission-restricted)
-- ✅ Lifecycle management (Cool tier, deletion policies)
-- ✅ Bicep Infrastructure as Code
-- ✅ PowerShell deployment automation
-- ✅ Git/GitHub with secret protection
-
-### Upcoming
-- 🔄 Virtual Machines (Windows + Linux)
-- 🔄 Networking (VNets, NSGs, Peering)
-- 🔄 Azure Firewall, Load Balancer
-- 🔄 Monitoring with KQL queries
-- 🔄 Backup and Disaster Recovery
+```
+/labs/              - Dated lab logs: commands run, output, what broke, how it was fixed
+/scripts/           - Reusable Bicep/CLI/PowerShell — not one-off throwaway commands
+/scripts/policies/  - Azure Policy JSON definitions and parameters
+/runbooks/          - "How to do X in production" docs, written for a teammate to follow
+/architecture/       - Diagrams and design write-ups from hands-on design exercises
+/interview-prep/    - Interview Q&A built up alongside the technical work
+/archive/           - Superseded plans and early scratch/test artifacts, kept for history
+```
 
 ---
 
-## Portfolio Projects
+## Lab Log
 
-| Project | Status | Technologies |
-|---------|--------|--------------|
-| Governance as Code | Week 1-4 | Management Groups, Policy, RBAC |
-| Resilient Web App | Week 5-7 | VMs, Load Balancer, CI/CD |
-| Secure Hub-Spoke Network | Week 8-10 | VNet Peering, Firewall, Private Link |
+| Lab | Topic | AZ-104 Domain(s) |
+|-----|-------|-------------------|
+| [01](./labs/01-identity-governance-intro.md) | Storage Accounts, Bicep, PowerShell | 2, 3, 5 |
+| [02](./labs/02-log.md) | Virtual Machines, NSGs, Availability | 3, 4 |
+| [03](./labs/03-log.md) | Azure Policy, RBAC, Governance | 1 |
+| [04](./labs/04-log.md) | Load Balancers, Scale Sets | 3, 4 |
+| [05](./labs/05-log.md) / [App Gateway basics](./labs/05-app-gateway-basics.md) | Monitoring, Alerts, App Gateway | 4, 5 |
+| [06](./labs/06-log.md) | Azure Firewall | 4 |
+| [07](./labs/07-log.md) | Design exercise (see `/architecture/`) | 3, 4 |
+| [08](./labs/08-log.md) | VNet Peering | 4 |
 
 ---
 
 ## AZ-104 Exam Progress
 
-| Domain | Weight | Progress |
-|--------|--------|----------|
-| Domain 1: Identity & Governance | 20-25% | 0% |
-| Domain 2: Storage | 15-20% | 40% ✅ |
-| Domain 3: Compute | 20-25% | 10% |
-| Domain 4: Networking | 20-25% | 0% |
-| Domain 5: Monitoring & Cost | 10-15% | 20% ✅ |
+| Domain | Weight | Status |
+|--------|--------|--------|
+| Domain 1: Identity & Governance | 20-25% | In progress |
+| Domain 2: Storage | 15-20% | Started |
+| Domain 3: Compute | 20-25% | Started |
+| Domain 4: Networking | 15-20% | Not started |
+| Domain 5: Monitoring | 10-15% | Started |
+
+Updated as I go — see [`ROADMAP.md`](./ROADMAP.md) for the phase-by-phase breakdown.
 
 ---
 
-## How to Navigate This Repo
+## Portfolio Projects
 
-- [`day1-log.md`](./day1-log.md) - Complete Day 1 documentation
-- [`storage.bicep`](./storage.bicep) - Bicep template for storage accounts
-- [`deploy-lab.ps1`](./deploy-lab.ps1) - PowerShell deployment script
-- [`destroy-all.ps1`](./destroy-all.ps1) - Resource cleanup script
+| Project | Technologies |
+|---------|--------------|
+| Governance as Code | Management Groups, Azure Policy, RBAC |
+| Hands-on design exercise | See [`/architecture/hands-on-design-project/`](./architecture/hands-on-design-project/) |
+| Networking (App Gateway, Firewall, VNet Peering) | Bicep, NSGs, Azure Firewall |
 
 ---
-| Day | Topic | AZ-104 Domains | Status |
-|-----|-------|----------------|--------|
-| [Day 1](./day1-log.md) | Storage Accounts, Bicep, PowerShell | Domains 2, 3, 5 | ✅ Complete |
-| [Day 2](./day2-log.md) | VMs, Availability, NSG, App Service | Domains 3, 4 | ✅ Complete |
-| [Day 3](./day3-log.md)| Azure Policy, RBAC, Governance | Domain 1 | ✅ Complete |
 
-## Connect With Me
+## Key Scripts
 
-[LinkedIn - www.linkedin.com/in/funso-aringbangba-843616b9]  
-[GitHub - You're already here]
+- [`scripts/storage.bicep`](./scripts/storage.bicep) — Storage account deployment
+- [`scripts/deploy-lab.ps1`](./scripts/deploy-lab.ps1) — Lab environment deployment
+- [`scripts/destroy-all.ps1`](./scripts/destroy-all.ps1) — Resource cleanup
+
+---
+
+## Connect
+
+[LinkedIn](https://www.linkedin.com/in/funso-aringbangba-843616b9) · GitHub — you're already here
 
 ---
 
 *"Consistency beats talent when talent doesn't show up."*
-

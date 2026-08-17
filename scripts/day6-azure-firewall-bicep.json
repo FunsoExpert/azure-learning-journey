@@ -1,0 +1,195 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+  "contentVersion": "1.0.0.0",
+  "metadata": {
+    "_generator": {
+      "name": "bicep",
+      "version": "0.44.1.10279",
+      "templateHash": "4742803987857519030"
+    }
+  },
+  "parameters": {
+    "location": {
+      "type": "string",
+      "defaultValue": "francecentral"
+    },
+    "environmentTag": {
+      "type": "string",
+      "defaultValue": "Learning"
+    },
+    "hubAddressPrefix": {
+      "type": "string",
+      "defaultValue": "10.0.0.0/16"
+    },
+    "spokeAddressPrefix": {
+      "type": "string",
+      "defaultValue": "10.1.0.0/16"
+    },
+    "firewallSubnetAddressPrefix": {
+      "type": "string",
+      "defaultValue": "10.0.1.0/26"
+    }
+  },
+  "variables": {
+    "hubVnetName": "[format('vnet-hub-{0}', parameters('environmentTag'))]",
+    "spokeVnetName": "[format('vnet-spoke-{0}', parameters('environmentTag'))]",
+    "firewallSubnetName": "AzureFirewallSubnet",
+    "firewallPublicIpName": "[format('pip-firewall-{0}', parameters('environmentTag'))]",
+    "firewallName": "[format('afw-hub-{0}', parameters('environmentTag'))]"
+  },
+  "resources": [
+    {
+      "type": "Microsoft.Network/virtualNetworks",
+      "apiVersion": "2023-11-01",
+      "name": "[variables('hubVnetName')]",
+      "location": "[parameters('location')]",
+      "properties": {
+        "addressSpace": {
+          "addressPrefixes": [
+            "[parameters('hubAddressPrefix')]"
+          ]
+        },
+        "subnets": [
+          {
+            "name": "[variables('firewallSubnetName')]",
+            "properties": {
+              "addressPrefix": "[parameters('firewallSubnetAddressPrefix')]"
+            }
+          }
+        ]
+      },
+      "tags": {
+        "CostCenter": "IT-Dept",
+        "Environment": "[parameters('environmentTag')]"
+      }
+    },
+    {
+      "type": "Microsoft.Network/virtualNetworks",
+      "apiVersion": "2023-11-01",
+      "name": "[variables('spokeVnetName')]",
+      "location": "[parameters('location')]",
+      "properties": {
+        "addressSpace": {
+          "addressPrefixes": [
+            "[parameters('spokeAddressPrefix')]"
+          ]
+        },
+        "subnets": [
+          {
+            "name": "snet-app",
+            "properties": {
+              "addressPrefix": "10.1.1.0/24"
+            }
+          }
+        ]
+      },
+      "tags": {
+        "CostCenter": "IT-Dept",
+        "Environment": "[parameters('environmentTag')]"
+      }
+    },
+    {
+      "type": "Microsoft.Network/virtualNetworks/virtualNetworkPeerings",
+      "apiVersion": "2023-11-01",
+      "name": "[format('{0}/{1}', variables('hubVnetName'), 'hub-to-spoke')]",
+      "properties": {
+        "remoteVirtualNetwork": {
+          "id": "[resourceId('Microsoft.Network/virtualNetworks', variables('spokeVnetName'))]"
+        },
+        "allowVirtualNetworkAccess": true,
+        "allowForwardedTraffic": true,
+        "allowGatewayTransit": false,
+        "useRemoteGateways": false
+      },
+      "dependsOn": [
+        "[resourceId('Microsoft.Network/virtualNetworks', variables('hubVnetName'))]",
+        "[resourceId('Microsoft.Network/virtualNetworks', variables('spokeVnetName'))]"
+      ]
+    },
+    {
+      "type": "Microsoft.Network/virtualNetworks/virtualNetworkPeerings",
+      "apiVersion": "2023-11-01",
+      "name": "[format('{0}/{1}', variables('spokeVnetName'), 'spoke-to-hub')]",
+      "properties": {
+        "remoteVirtualNetwork": {
+          "id": "[resourceId('Microsoft.Network/virtualNetworks', variables('hubVnetName'))]"
+        },
+        "allowVirtualNetworkAccess": true,
+        "allowForwardedTraffic": true,
+        "allowGatewayTransit": false,
+        "useRemoteGateways": false
+      },
+      "dependsOn": [
+        "[resourceId('Microsoft.Network/virtualNetworks', variables('hubVnetName'))]",
+        "[resourceId('Microsoft.Network/virtualNetworks', variables('spokeVnetName'))]"
+      ]
+    },
+    {
+      "type": "Microsoft.Network/publicIPAddresses",
+      "apiVersion": "2023-11-01",
+      "name": "[variables('firewallPublicIpName')]",
+      "location": "[parameters('location')]",
+      "sku": {
+        "name": "Standard"
+      },
+      "properties": {
+        "publicIPAllocationMethod": "Static"
+      },
+      "tags": {
+        "CostCenter": "IT-Dept",
+        "Environment": "[parameters('environmentTag')]"
+      }
+    },
+    {
+      "type": "Microsoft.Network/azureFirewalls",
+      "apiVersion": "2023-11-01",
+      "name": "[variables('firewallName')]",
+      "location": "[parameters('location')]",
+      "properties": {
+        "sku": {
+          "name": "AZFW_VNet",
+          "tier": "Standard"
+        },
+        "ipConfigurations": [
+          {
+            "name": "ipconfig",
+            "properties": {
+              "subnet": {
+                "id": "[reference(resourceId('Microsoft.Network/virtualNetworks', variables('hubVnetName')), '2023-11-01').subnets[0].id]"
+              },
+              "publicIPAddress": {
+                "id": "[resourceId('Microsoft.Network/publicIPAddresses', variables('firewallPublicIpName'))]"
+              }
+            }
+          }
+        ]
+      },
+      "tags": {
+        "CostCenter": "IT-Dept",
+        "Environment": "[parameters('environmentTag')]"
+      },
+      "dependsOn": [
+        "[resourceId('Microsoft.Network/publicIPAddresses', variables('firewallPublicIpName'))]",
+        "[resourceId('Microsoft.Network/virtualNetworks', variables('hubVnetName'))]"
+      ]
+    }
+  ],
+  "outputs": {
+    "hubVnetId": {
+      "type": "string",
+      "value": "[resourceId('Microsoft.Network/virtualNetworks', variables('hubVnetName'))]"
+    },
+    "spokeVnetId": {
+      "type": "string",
+      "value": "[resourceId('Microsoft.Network/virtualNetworks', variables('spokeVnetName'))]"
+    },
+    "firewallPublicIp": {
+      "type": "string",
+      "value": "[reference(resourceId('Microsoft.Network/publicIPAddresses', variables('firewallPublicIpName')), '2023-11-01').ipAddress]"
+    },
+    "firewallId": {
+      "type": "string",
+      "value": "[resourceId('Microsoft.Network/azureFirewalls', variables('firewallName'))]"
+    }
+  }
+}
