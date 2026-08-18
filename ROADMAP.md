@@ -32,9 +32,9 @@ Commit after every lab — small, frequent commits. This is a real hiring-manage
 - [x] Resource groups, region/location behavior
 - [x] Azure Policy — allowed locations, policy vs RBAC
 - [x] RBAC role assignments, additive inheritance rule
-- [ ] Entra ID: users, groups, group-based role assignment *(in progress)*
-- [ ] Subscriptions, cost management basics, tags, resource locks
-- [ ] Management groups (light — you have one subscription)
+- [x] Entra ID: users, groups, group-based role assignment
+- [x] Subscriptions, cost management basics, tags, resource locks
+- [~] Management groups — lightly covered (single subscription, concept understood, not hands-on)
 - [ ] Conditional Access basics (what it is, why orgs use it — read-level, not hands-on required for AZ-104)
 - [ ] Privileged Identity Management (PIM) — concept only: just-in-time role elevation, why it exists
 
@@ -46,6 +46,10 @@ Commit after every lab — small, frequent commits. This is a real hiring-manage
 
 **Documentation task:**
 - [ ] `/runbooks/rbac-troubleshooting.md` — write this as a real runbook: "User reports access denied → steps to diagnose (check RBAC at all scopes, check Policy, check Conditional Access) → resolution." Base it on what you actually learned in the region-restriction lab.
+- [x] `/runbooks/access-provisioning-via-groups.md` — group-based access provisioning runbook (done, lab 09)
+- [x] Labs 09 (Entra groups/RBAC) and 10 (tags/locks/cost) logged in `/labs/`
+
+**Phase 1 status: COMPLETE** (2026-08-18) — hands-on for hierarchy, resource groups, Policy, RBAC inheritance, Entra ID groups, tags, and locks. Remaining open item: the RBAC troubleshooting runbook above — pick up when convenient, not blocking Phase 2.
 
 ---
 
