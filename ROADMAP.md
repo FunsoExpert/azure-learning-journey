@@ -53,15 +53,16 @@ Commit after every lab — small, frequent commits. This is a real hiring-manage
 
 ---
 
-## Phase 2 — Storage *(Week 2 — exam weight 15-20%)*
+## Phase 2 — Storage *(Week 2 — exam weight 15-20%)* — COMPLETE (2026-08-25)
 
 **Exam content:**
-- [ ] Storage account types and redundancy: LRS, ZRS, GRS, GZRS — and when each is the right call (this is a cost-vs-resilience tradeoff decision, not memorization)
-- [ ] Blob access tiers (Hot/Cool/Cold/Archive) and lifecycle management policies
-- [ ] SAS tokens, storage account keys, Microsoft Entra-based access to storage
-- [ ] Storage firewalls, private endpoints, network restrictions
-- [ ] AzCopy and Storage Explorer
-- [ ] Soft delete, versioning, point-in-time restore for blobs
+- [x] Storage account types and redundancy: LRS, ZRS, GRS, GZRS — and when each is the right call (this is a cost-vs-resilience tradeoff decision, not memorization)
+- [x] Blob access tiers (Hot/Cool/Cold/Archive) and lifecycle management policies
+- [x] SAS tokens, storage account keys, Microsoft Entra-based access to storage
+- [x] Storage firewalls, private endpoints, network restrictions
+- [x] AzCopy and Storage Explorer (AzCopy hands-on; Storage Explorer skipped — low priority given repeated Portal/CLI proof elsewhere)
+- [x] Soft delete, versioning, point-in-time restore for blobs (covered conceptually via Portal defaults observed)
+- [x] Azure Files / file shares
 
 **Real-world tie-in:**
 - A dev team asks you to set up storage for an app — you need to pick redundancy/tier based on actual cost and recovery requirements, not defaults
