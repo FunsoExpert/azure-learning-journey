@@ -75,15 +75,21 @@ Commit after every lab — small, frequent commits. This is a real hiring-manage
 
 ---
 
-## Phase 3 — Compute *(Week 3 — exam weight 20-25%)*
+## Phase 3 — Compute *(Week 3 — exam weight 20-25%)* — COMPLETE (2026-08-27)
 
 **Exam content:**
-- [ ] VM creation, sizing, disks (managed disks, disk types)
-- [ ] Availability Sets vs Availability Zones (fault/update domain concepts — you have real experience here from your independent project)
-- [ ] VM extensions, custom script extension
-- [ ] ARM templates and Bicep — parameters, variables, modules (you have a head start)
-- [ ] Azure Container Apps / basic container concepts
-- [ ] Update Management / patch compliance
+- [x] VM creation, sizing, disks (managed disks, disk types)
+- [x] Availability Sets vs Availability Zones (fault/update domain concepts)
+- [x] VM extensions, custom script extension
+- [x] ARM templates and Bicep — parameters, variables, modules, dependency resolution, idempotency
+- [x] Azure Container Apps (basics, PaaS vs IaaS comparison)
+- [x] Update Management / patch compliance
+- [~] VM Scale Sets + autoscale — not covered hands-on, flagged for later revisit if time allows
+- [~] App Service (Web Apps) — not covered hands-on, flagged for later revisit if time allows
+
+**Note:** Azure for Students subscription has NO VM provisioning rights at all
+(`NotAvailableForSubscription` on every size tested) — all Compute hands-on work
+permanently routes through the Fortray/Simplilearn sandbox as a standing rule.
 
 **Real-world tie-in:**
 - Right-sizing VMs after deployment (cost optimization is a daily reality, not a one-time decision)
