@@ -75,31 +75,32 @@ Commit after every lab — small, frequent commits. This is a real hiring-manage
 
 ---
 
-## Phase 3 — Compute *(Week 3 — exam weight 20-25%)* — COMPLETE (2026-08-27)
+## Phase 3 — Compute *(Week 3 — exam weight 20-25%)* — FULLY COMPLETE (2026-09-02)
 
-**Exam content:**
+**Exam content — cross-checked against Microsoft's official skills outline:**
 - [x] VM creation, sizing, disks (managed disks, disk types)
 - [x] Availability Sets vs Availability Zones (fault/update domain concepts)
 - [x] VM extensions, custom script extension
 - [x] ARM templates and Bicep — parameters, variables, modules, dependency resolution, idempotency
+- [x] VM Scale Sets + autoscale (hysteresis, cooldown, Flexible orchestration mode)
 - [x] Azure Container Apps (basics, PaaS vs IaaS comparison)
+- [x] Azure Container Instances (ACI) — measured comparison against Container Apps
+- [x] App Service — plans/tiers/scaling, deployment slots (Portal walkthrough; hands-on
+      blocked by a genuine subscription quota limit in the training sandbox, documented
+      honestly in Lab 29 rather than skipped)
 - [x] Update Management / patch compliance
-- [~] VM Scale Sets + autoscale — not covered hands-on, flagged for later revisit if time allows
-- [~] App Service (Web Apps) — not covered hands-on, flagged for later revisit if time allows
 
-**Note:** Azure for Students subscription has NO VM provisioning rights at all
-(`NotAvailableForSubscription` on every size tested) — all Compute hands-on work
-permanently routes through the Fortray/Simplilearn sandbox as a standing rule.
-
-**Real-world tie-in:**
-- Right-sizing VMs after deployment (cost optimization is a daily reality, not a one-time decision)
-- Patch Tuesday-style patching cycles and how update management/compliance gets tracked
-- "The VM won't start" or "disk is full" — classic support tickets, need to know how to diagnose via CLI/Portal fast
-- Infrastructure as Code review — reading someone else's Bicep before approving a deployment (change management, which you already know from ITIL)
-
-**Documentation task:**
-- [ ] `/scripts/vm-deploy.bicep` — a reusable, parameterized VM deployment template (not throwaway)
-- [ ] `/runbooks/vm-troubleshooting-checklist.md` — boot failures, connectivity, disk issues
+**Notes:**
+- Azure for Students subscription has NO VM provisioning rights at all
+  (`NotAvailableForSubscription` on every size tested) — all Compute hands-on work
+  permanently routes through the Fortray/Simplilearn sandbox as a standing rule.
+- Three distinct categories of "no" encountered and diagnosed across this phase: Azure
+  Policy `deny`, platform/SKU capability limits, and subscription/region quota — each
+  requiring a different diagnostic approach, documented in Lab 29.
+- From Lab 24 onward, hands-on work follows Microsoft's official LAB_08 (Manage Virtual
+  Machines) document directly, adapted only where sandbox policy forces a substitution —
+  per an explicit decision to follow official Microsoft lab documents going forward
+  rather than self-designed exercises.
 
 ---
 
