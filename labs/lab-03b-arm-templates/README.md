@@ -55,7 +55,6 @@ Same template and same parameters file as PowerShell. Only the command changed. 
 ![CLI deployment](screenshots/05-cli-deploy.png)
 
 ## Task 5: Deploy with Bicep
-## Task 5: Deploy with Bicep
 I uploaded `azuredeploydisk.bicep` to Cloud Shell and read through it before changing anything. Compared with the JSON template, it's a lot shorter and easier to read. I set the disk name to `az104-disk5` and the size to 32 GiB.
 
 The lab also says to change the SKU to `StandardSSD_LRS`. I left it as `Standard_LRS` because my sandbox only allows that SKU.
