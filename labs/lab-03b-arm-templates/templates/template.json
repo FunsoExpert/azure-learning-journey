@@ -2,8 +2,8 @@
     "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
     "contentVersion": "1.0.0.0",
     "parameters": {
-        "disks_az104_disk1_name": {
-            "defaultValue": "az104-disk1",
+        "disk_name": {
+            "defaultValue": "az104-disk2",
             "type": "String"
         }
     },
@@ -12,7 +12,7 @@
         {
             "type": "Microsoft.Compute/disks",
             "apiVersion": "2026-03-02",
-            "name": "[parameters('disks_az104_disk1_name')]",
+            "name": "[parameters('disk_name')]",
             "location": "francecentral",
             "sku": {
                 "name": "Standard_LRS",
